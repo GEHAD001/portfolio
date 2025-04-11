@@ -1,1 +1,88 @@
 @import "tailwindcss";
+@plugin "tailwindcss-motion";
+
+@theme {
+  --spacing-dynamic-screen: 100dvh;
+
+  --breakpoint-2xl: 85em;
+}
+
+@layer utilities {
+  .grid-area-one {
+    grid-area: one;
+  }
+  .grid-area-two {
+    grid-area: two;
+  }
+  .grid-area-three {
+    grid-area: three;
+  }
+  .grid-area-four {
+    grid-area: four;
+  }
+  .grid-area-five {
+    grid-area: five;
+  }
+  .grid-area-six {
+    grid-area: six;
+  }
+  .grid-area-seven {
+    grid-area: seven;
+  }
+  .grid-area-eight {
+    grid-area: eight;
+  }
+}
+
+@utility base-layout {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 100dvh);
+  margin-inline: auto;
+  width: calc(100% - 1rem);
+
+  @media (min-width: 768px) {
+    width: calc(100% - 4rem);
+  }
+  @media (min-width: 1024px) {
+    width: calc(100% - 8rem);
+  }
+
+  @media (min-width: 85em) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: calc(100% - 1rem);
+  }
+}
+
+@utility flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@theme {
+}
+
+.avatar-responsive {
+  width: clamp(5rem, 10vw + 1rem, 10rem);
+  height: clamp(5rem, 10vw + 1rem, 10rem);
+}
+
+@utility skills-layout {
+  display: grid;
+  grid-template-areas: "one" "two" "three" "four" "five" "six";
+  @media (min-width: 768px) {
+    grid-template-areas: "one one two" "three three two" "four five six ";
+  }
+}
+
+.developer-layout {
+  display: grid;
+  grid-template-areas: "one" "two" "three" "four" "five" "six";
+  @media (min-width: 768px) {
+    grid-template-areas:
+      "one one two three"
+      "four five six six";
+  }
+}
