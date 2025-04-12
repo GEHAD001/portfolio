@@ -143,7 +143,7 @@ export const designerException: {
 export const techs: {
   name: string;
   description: string;
-  Icon: React.FunctionComponent;
+  Icon: React.ComponentType<{ size?: number }>;
 }[] = [
   {
     name: "TypeScript",
