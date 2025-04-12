@@ -8,19 +8,18 @@ import DesignerSection from "./DesignerSection";
 import ContactSection from "./ContactSection";
 export default function ContentSection() {
   return (
-    <Section id="Content">
-      {/* (`Skills`) */}
-      <SkillsSection className="bg-amber-300 p-12 md:p-24" />
+    <Section id="Content" className="flex-col-center gap-4">
+      <SkillsSection className="w-full rounded-2xl bg-amber-50 p-12 shadow-lg md:p-16" />
 
-      {/* (`TechStack`) */}
-      <TechStackSection className="p-12 md:p-24 bg-green-200 overflow-hidden" />
+      <TechStackSection className="w-full rounded-2xl bg-emerald-50 p-12 shadow-lg md:p-16" />
 
-      {/* (`Projects`) */}
-      <ProjectsSection className="p-12 md:p-24 bg-amber-200 overflow-hidden" />
+      <ProjectsSection className="w-full rounded-2xl bg-rose-50 p-12 shadow-lg md:p-16" />
 
-      <DeveloperSection className="p-12 md:p-24 bg-lime-200 overflow-hidden" />
-      <DesignerSection className="p-12 md:p-24 bg-orange-200 overflow-hidden" />
-      <ContactSection className="p-12 md:p-24 bg-lime-200 overflow-hidden" />
+      <DeveloperSection className="w-full rounded-2xl p-12 shadow-lg md:p-16" />
+
+      <DesignerSection className="w-full rounded-2xl bg-purple-50 p-12 shadow-lg md:p-16" />
+
+      <ContactSection className="w-full rounded-2xl bg-indigo-50 p-12 shadow-lg md:p-16" />
     </Section>
   );
 }

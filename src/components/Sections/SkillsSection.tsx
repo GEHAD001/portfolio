@@ -8,13 +8,10 @@ import H2 from "../H2";
 
 export default function SkillsSection({ className }: { className?: string }) {
   return (
-    <Section className={cn("flex-col-center", className)}>
-      <H2 className="text-4xl font-bold mb-4">Skills</H2>
-      <P>
-        A collection of my recent work showcasing my skills and experience in
-        web development.
-      </P>
-      <motion.div className={cn("skills-layout gap-2")}>
+    <Section className={cn("flex-col-center gap-4", className)}>
+      <H2 className="text-4xl font-bold">Skills</H2>
+      <P>Here&apos;s what I bring to the table</P>
+      <motion.div className={cn("skills-layout gap-4")}>
         {skills.map(({ title, description, className }) => (
           <SkillCard
             title={title}
@@ -38,9 +35,15 @@ function SkillCard({
   className?: string;
 }) {
   return (
-    <div className={cn("flex-col-center border-2 p-8 rounded-xl", className)}>
-      <h1 className="text-3xl font-semibold">{title}</h1>
-      <P>{description}</P>
+    <div
+      className={cn(
+        "flex-col-center p-8 rounded-2xl shadow-lg transition-all hover:scale-[1.02]",
+        "border-2 border-opacity-20",
+        className
+      )}
+    >
+      <h1 className="text-3xl font-semibold mb-2">{title}</h1>
+      <P className="text-opacity-90">{description}</P>
     </div>
   );
 }

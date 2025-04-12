@@ -8,9 +8,9 @@ import Wrapper from "../Wrapper";
 export default function HeroSection() {
   return (
     <>
-      <Section id="Hero" className="relative">
+      <Section id="Hero" className="relative bg-amber-50">
         <div className="relative h-full">
-          <Wrapper className="2xl:sticky 2xl:top-2 bg-amber-200 2xl:p-20 flex-col-center h-dynamic-screen">
+          <Wrapper className="2xl:sticky 2xl:top-2 2xl:p-20 flex-col-center gap-4 h-dynamic-screen text-center">
             <Avatar />
             <div className="flex-col-center">
               <TextTransition

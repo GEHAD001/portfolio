@@ -9,7 +9,7 @@ export default function GridBaseLayout({
   className?: string;
 }) {
   return (
-    <main className={cn(" base-layout lg:h-dynamic-screen", className)}>
+    <main className={cn("base-layout lg:h-dynamic-screen", className)}>
       {children}
     </main>
   );

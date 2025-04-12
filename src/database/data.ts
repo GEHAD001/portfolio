@@ -31,38 +31,38 @@ export const skills: {
   {
     title: "Developer",
     description:
-      "Can develop and maintain web applications using modern web technologies.",
-    className: "grid-area-one",
+      "I love building cool websites and apps! I use modern tools to create fast, reliable solutions that work great for everyone.",
+    className: "grid-area-one bg-blue-100 hover:bg-blue-200",
   },
-
   {
     title: "Designer",
     description:
-      "design and create visually appealing and user-friendly websites.",
-    className: "grid-area-two",
+      "I create user-friendly designs that look great and work smoothly. Making websites that everyone can use easily is my priority!",
+    className: "grid-area-two bg-purple-100 hover:bg-purple-200",
   },
   {
     title: "Frontend",
     description:
-      "Can create responsive and interactive user interfaces using modern web technologies.",
-    className: "grid-area-three",
+      "I make websites look awesome and work smoothly! Using the latest tools to build interfaces that users love.",
+    className: "grid-area-three bg-rose-100 hover:bg-rose-200",
   },
   {
     title: "Technical",
-    description: "can solve technical problems of computers and software.",
-    className: "grid-area-four",
+    description:
+      "I know my way around computers - both the physical stuff and the software side. Always ready to solve tech puzzles!",
+    className: "grid-area-four bg-emerald-100 hover:bg-emerald-200",
   },
   {
     title: "Communicator",
     description:
-      "can effectively communicate technical concepts to non-technical stakeholders.",
-    className: "grid-area-five",
+      "I'm great at working with others! Clear communication and team collaboration are my strong points.",
+    className: "grid-area-five bg-amber-100 hover:bg-amber-200",
   },
   {
     title: "Trustworthy",
     description:
-      "can trust me on my work and can provide reliable and timely support.",
-    className: "grid-area-six",
+      "You can count on me to get things done right! I deliver quality work on time and keep everyone in the loop.",
+    className: "grid-area-six bg-cyan-100 hover:bg-cyan-200",
   },
 ];
 
@@ -70,49 +70,42 @@ export const projects: {
   name: string;
   description: string;
   technologies: string[];
-  link?: string;
 }[] = [
   {
     name: "Portfolio",
     description:
-      "A professional portfolio website showcasing my skills, projects, and experience using modern web technologies.",
+      "Hey there! This is the website you're looking at right now. I built it to show off my work and skills in a fun, interactive way!",
     technologies: ["Next", "React", "Tailwind", "Motion"],
-    link: "https://portfolio.example.com",
   },
   {
     name: "Archive Graduation CMS",
     description:
-      "A comprehensive content management system developed for my university graduation project, integrating modern technologies for optimal performance and user experience.",
+      "My graduation project! I created a super-easy way for universities to manage their digital archives. It's like a smart filing cabinet that makes finding and organizing documents a breeze.",
     technologies: ["Vue", "Django", "PostgreSQL", "Tailwind"],
-    link: "https://archive-cms.example.com",
   },
   {
     name: "Cabin Management System",
     description:
-      "A full-featured property management application built with React, allowing users to manage cabin bookings, availability, and customer information.",
+      "A handy tool for cabin rental businesses! It helps track bookings, manage cabin availability, and keep guest info organized - making vacation planning smooth and stress-free.",
     technologies: ["React", "React Router", "Supabase", "Tailwind"],
-    link: "https://cabin-system.example.com",
   },
   {
     name: "Fast Typing",
     description:
-      "An interactive typing practice application designed to improve typing speed and accuracy, implemented with different state management approaches for performance comparison.",
+      "Want to type faster? This fun app helps you improve your typing speed and accuracy through interactive exercises. It's like a gym for your fingers!",
     technologies: ["React", "Tailwind", "Sqlite"],
-    link: "https://fast-typing.example.com",
   },
   {
     name: "Mini Games Collection",
     description:
-      "A collection of browser-based mini-games including Tic-Tac-Toe, Dice Roller, Rock Paper Scissors, and Number Guessing, demonstrating core web development principles.",
+      "Take a break with these fun browser games! Play classic favorites like Tic-Tac-Toe and Rock Paper Scissors. Perfect for a quick mental refresh!",
     technologies: ["HTML", "CSS", "JS"],
-    link: "https://mini-games.example.com",
   },
   {
     name: "Productivity Suite",
     description:
-      "An all-in-one productivity application featuring daily notes, task management, flashcard system, and other organizational tools to enhance personal and professional efficiency.",
+      "Your digital assistant for staying organized! Keep track of tasks, take notes, and study with flashcards - all in one place. It's like having a super-smart notebook!",
     technologies: ["Next", "React", "Tailwind", "MongoDB"],
-    link: "https://productivity-suite.example.com",
   },
 ];
 
@@ -121,27 +114,29 @@ export const designerException: {
   description: string;
 }[] = [
   {
-    title: "Build Complex Layouts",
+    title: "Smart Layouts",
     description:
-      "because I am confidence with CSS-Grid and Flexbox, I can build complex layouts with ease.",
+      "I create websites that look great on any device! Using modern layout techniques, I ensure everything stays organized and easy to navigate.",
   },
   {
-    title: "Typography",
+    title: "Beautiful Typography",
     description:
-      "because now basics of typography is well understood, I can build typography with ease.",
+      "I make text look amazing and super easy to read! From headlines to body text, every word gets the perfect style and spacing.",
   },
   {
-    title: "Consistency",
+    title: "Design Systems",
     description:
-      "Picking right layout, colors, typography for building consistncy design.",
+      "I build design systems that keep everything looking consistent and professional. Think of it as a perfect recipe for beautiful websites!",
   },
   {
-    title: "Coloring",
-    description: "Laverge Power of AI to pick right colors for projects.",
+    title: "Color Magic",
+    description:
+      "I choose colors that work for everyone! My color combinations look great and are easy on the eyes, making websites accessible to all users.",
   },
   {
-    title: "Motion",
-    description: "I can build motion (Optimized) for website with ease .",
+    title: "Smooth Animations",
+    description:
+      "I add life to websites with smooth, purposeful animations! These little touches make the experience more engaging and intuitive.",
   },
 ];
 
@@ -153,31 +148,103 @@ export const techs: {
   {
     name: "TypeScript",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
+      "Leveraging TypeScript for type-safe development, enabling robust enterprise applications with enhanced code maintainability and scalability.",
     Icon: TypescriptOriginal,
   },
   {
     name: "Tailwind",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
+      "Utilizing Tailwind CSS for rapid UI development with utility-first approach, ensuring consistent design systems and optimal performance.",
     Icon: TailwindcssOriginal,
   },
   {
     name: "Next",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
+      "Implementing Next.js for server-side rendering and static site generation, optimizing performance and SEO while maintaining excellent developer experience.",
     Icon: NextjsOriginal,
   },
   {
     name: "React",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
+      "Building scalable component architectures with React, emphasizing reusability, state management, and modern hooks patterns.",
     Icon: ReactOriginal,
   },
   {
     name: "Motion",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
+      "Crafting fluid animations and transitions using Framer Motion, enhancing user experience while maintaining optimal performance metrics.",
     Icon: FramermotionOriginal,
+  },
+];
+
+export const contacts: {
+  label: string;
+  value: string;
+  id: string;
+}[] = [
+  {
+    label: "Email",
+    value: "eng.jihadjadallah@gmail.com",
+    id: "email",
+  },
+  {
+    label: "Telegram",
+    value: "+218922478039",
+    id: "telegram",
+  },
+  {
+    label: "What's App",
+    value: "+218922478039",
+    id: "whatsapp",
+  },
+  {
+    label: "Github",
+    value: "https://github.com/GEHAD001",
+    id: "github",
+  },
+];
+
+export const developerException: {
+  title: string;
+  description: string;
+  className: string;
+}[] = [
+  {
+    title: "Research First, Code Later",
+    description:
+      "Before diving in, I take time to research and plan. This helps me find the best solutions and avoid common pitfalls!",
+    className:
+      "grid-area-one bg-blue-100 hover:bg-blue-200 md:bg-blue-200 md:hover:bg-blue-300",
+  },
+  {
+    title: "Always Learning",
+    description:
+      "Every challenge is a chance to learn! I see mistakes as stepping stones to becoming a better developer.",
+    className: "grid-area-two bg-blue-100 hover:bg-blue-200",
+  },
+  {
+    title: "Adaptable & Flexible",
+    description:
+      "I love learning new technologies! With strong fundamentals, I can quickly adapt to different tools and frameworks.",
+    className: "grid-area-three bg-blue-100 hover:bg-blue-200",
+  },
+  {
+    title: "AI-Friendly Developer",
+    description:
+      "I embrace AI as a powerful tool that helps me work smarter and faster. It's like having a super-helpful coding buddy!",
+    className: "grid-area-four bg-blue-100 hover:bg-blue-200",
+  },
+  {
+    title: "Deep Understanding",
+    description:
+      "I take the time to really understand what I'm working with. This helps me write better code and solve problems more effectively.",
+    className: "grid-area-five bg-blue-100 hover:bg-blue-200",
+  },
+  {
+    title: "Reliable Partner",
+    description:
+      "You can count on me to be honest, make smart decisions, and always keep your best interests in mind.",
+    className:
+      "grid-area-six bg-blue-100 hover:bg-blue-200 md:bg-blue-200 md:hover:bg-blue-300",
   },
 ];

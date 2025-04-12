@@ -32,15 +32,15 @@ function TextTransition({
   return (
     <div
       className={cn(
-        "flex items-center gap-2 bg-black text-white p-2 rounded text-2xl",
-        className
+        "flex items-center gap-2 rounded bg-black p-2 text-2xl text-white",
+        className,
       )}
     >
       <div>{prefix}</div>
-      <div className="flex flex-col h-[2rem] leading-[2rem]  overflow-hidden">
+      <div className="flex h-[2rem] flex-col overflow-hidden leading-[2rem]">
         <motion.span
           style={{ y: firstWordY }}
-          className="relative transition-transform duration-1000"
+          className="relative transition-transform duration-1000 will-change-transform"
         >
           {first}
         </motion.span>

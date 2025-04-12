@@ -6,8 +6,23 @@
 
 @theme {
   --spacing-dynamic-screen: 100dvh;
-
   --breakpoint-2xl: 85em;
+
+  /* Light theme colors */
+  --color-background-primary: #f8f9fa;
+  --color-background-secondary: #e9ecef;
+  --color-accent-primary: #6c9bbc;
+  --color-accent-secondary: #95b8d1;
+  --color-accent-tertiary: #dbe7f0;
+  --color-primary-text: #2d3436;
+  --color-secondary-text: #6c757d;
+  --color-muted: #adb5bd;
+
+  /* Accent colors for highlights and interactions */
+  --color-success: #9ed5c5;
+  --color-warning: #ffd8a8;
+  --color-info: #bac8ff;
+  --color-error: #ffc9c9;
 }
 
 @layer utilities {

@@ -2,49 +2,9 @@ import React from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
 import Wrapper from "../Wrapper";
-
-const developerException: {
-  title: string;
-  description: string;
-  className: string;
-}[] = [
-  {
-    title: "Plan & Search before Anything",
-    description:
-      "before takes any desciton that don't have expernice on it, should plan, search, and ask experts to get better result",
-    className: "grid-area-one",
-  },
-  {
-    title: "Learn from mastikes",
-    description:
-      "as any Human make mastikes, but should learn from it when happen to try much as possible to make it less and less",
-    className: "grid-area-two",
-  },
-  {
-    title: "Verstile",
-    description:
-      "with build good foundation, I can move between frameworks and libraries because I am focus on Theortical",
-    className: "grid-area-three",
-  },
-  {
-    title: "Levrage Power of AI",
-    description:
-      "my ophoinoe about AI is make it as friend not enemy, that will help us to do awsowe things in less-time, (time is gold and should know about that)",
-    className: "grid-area-four",
-  },
-  {
-    title: "Confidence in what I Know",
-    description:
-      "i am from type that let any learn topic take time to understand, to raise to confidence level",
-    className: "grid-area-five",
-  },
-  {
-    title: "Trusted and honest",
-    description:
-      "I Honest and i am not take any non-logical Decsion or unTrusted",
-    className: "grid-area-six",
-  },
-];
+import { developerException } from "@/database/data";
+import H2 from "../H2";
+import P from "../P";
 
 export default function DeveloperSection({
   className,
@@ -52,13 +12,28 @@ export default function DeveloperSection({
   className?: string;
 }) {
   return (
-    <Section className={cn("", className)}>
-      <h1>What Did You Expect From me As Developer</h1>
-      <Wrapper className="developer-layout gap-2">
+    <Section className={cn("flex-col-center bg-blue-50", className)}>
+      <H2 className="mb-4 text-4xl font-bold">
+        How I Work as a{" "}
+        <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
+          Developer
+        </span>
+      </H2>
+      <P className="mx-auto max-w-2xl text-center text-lg text-gray-600">
+        I love solving problems and creating great solutions. Here&apos;s my
+        approach to development!
+      </P>
+      <Wrapper className="developer-layout mt-8 gap-4">
         {developerException.map(({ title, description, className }) => (
-          <div className={cn("border p-2", className)} key={title}>
-            {title}
-            {description}
+          <div
+            className={cn(
+              "rounded-xl p-6 shadow-md transition-all hover:shadow-lg",
+              className,
+            )}
+            key={title}
+          >
+            <h3 className="mb-2 text-xl font-semibold">{title}</h3>
+            <P className="text-gray-600">{description}</P>
           </div>
         ))}
       </Wrapper>

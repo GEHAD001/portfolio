@@ -16,11 +16,11 @@ export default function TechStackSection({
 
   return (
     <Section
-      className={cn("grid gap-12 p-24 items-center justify-center", className)}
+      className={cn("grid items-center justify-center gap-12 p-24", className)}
       ref={sectionRef}
     >
       <div className="flex-col-center">
-        <H2 className="text-4xl font-bold mb-4">Technology Stack</H2>
+        <H2 className="mb-4 text-4xl font-bold">Technology Stack</H2>
         <P>A collection of modren tecnologies I am familiar with.</P>
       </div>
       {techs.map(({ name, description, Icon }) => (
@@ -30,13 +30,15 @@ export default function TechStackSection({
             opacity: inView ? 1 : 0,
           }}
           className={cn(
-            "grid grid-flow-row md:grid-flow-col gap-4 items-center transition-[transform_opacity] duration-[2250ms] place-items-center"
+            "grid grid-flow-row items-center gap-6 rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-sm transition-[transform_opacity] duration-[1850ms] hover:bg-white/10 hover:shadow-xl md:grid-flow-col",
           )}
           key={name}
         >
-          <Icon size={80} className="place-items-center" />
-          <div className="flex flex-col text-center md:text-start">
-            <h1 className="text-[clamp(0.5rem,__10vw+0.5em__,1.5rem)]">
+          <div className="flex-col-center rounded-lg bg-gradient-to-br from-white/10 to-white/5 p-4 shadow-inner">
+            <Icon size={80} />
+          </div>
+          <div className="flex flex-col space-y-2 text-center md:text-start">
+            <h1 className="text-[clamp(1rem,__8vw+0.5em__,1.75rem)] font-semibold">
               {name}
             </h1>
             <P>{description}</P>
