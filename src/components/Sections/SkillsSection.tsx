@@ -37,13 +37,13 @@ function SkillCard({
   return (
     <div
       className={cn(
-        "flex-col-center p-8 rounded-2xl shadow-lg transition-all hover:scale-[1.02]",
-        "border-2 border-opacity-20",
-        className
+        "flex-col-center rounded-2xl p-8 shadow-lg transition-all hover:scale-[1.02]",
+        "border-opacity-20 border-2",
+        className,
       )}
     >
-      <h1 className="text-3xl font-semibold mb-2">{title}</h1>
-      <P className="text-opacity-90">{description}</P>
+      <h1 className="mb-2 text-xl font-semibold">{title}</h1>
+      <p className="text-opacity-90 text-sm">{description}</p>
     </div>
   );
 }

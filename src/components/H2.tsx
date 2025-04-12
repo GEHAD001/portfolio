@@ -9,7 +9,12 @@ export default function H2({
   className?: string;
 }) {
   return (
-    <h2 className={cn("text-4xl font-bold text-primary-text", className)}>
+    <h2
+      className={cn(
+        "text-primary-text text-lg font-bold sm:text-xl md:text-2xl",
+        className,
+      )}
+    >
       {children}
     </h2>
   );

@@ -9,18 +9,18 @@ export default function HeroSection() {
   return (
     <>
       <Section id="Hero" className="relative bg-amber-50">
-        <div className="relative min-h-full p-20">
+        <div className="relative min-h-full">
           <Wrapper className="flex-col-center h-dynamic-screen gap-4 text-center 2xl:sticky 2xl:top-2 2xl:p-20">
             <Avatar />
             <div className="flex-col-center">
               <TextTransition
-                prefix="Eng.Gehad"
+                prefix="Eng. Jehad"
                 first="Developer"
                 last="Designer"
               />
             </div>
 
-            <div className="flex-col-center gap-2">
+            <div className="flex-col-center gap-2 px-8">
               <P>
                 I&apos;m Jehad Jadallah Hamed, a junior software developer and
                 design base on AI. Based in Libya, I recently graduated from

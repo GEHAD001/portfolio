@@ -38,9 +38,7 @@ export default function TechStackSection({
             <Icon size={80} />
           </div>
           <div className="flex flex-col space-y-2 text-center md:text-start">
-            <h1 className="text-[clamp(1rem,__8vw+0.5em__,1.75rem)] font-semibold">
-              {name}
-            </h1>
+            <h1 className="text-xl font-semibold">{name}</h1>
             <P>{description}</P>
           </div>
         </motion.div>

@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
 import { useScroll, useTransform, motion } from "motion/react";
-import P from "../P";
 import { designerException } from "@/database/data";
 
 export default function DesignerSection({ className }: { className?: string }) {
@@ -50,7 +49,7 @@ export default function DesignerSection({ className }: { className?: string }) {
             className="flex-col-center gap-6 rounded-xl border-2 border-purple-200 bg-white/50 p-8 shadow-sm transition-colors duration-300 hover:bg-purple-50 hover:shadow-md"
           >
             <h1 className="text-2xl font-semibold text-purple-800">{title}</h1>
-            <P className="text-purple-900/80">{description}</P>
+            <p className="text-sm text-purple-900/80">{description}</p>
           </div>
         ))}
       </div>

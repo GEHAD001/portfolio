@@ -9,7 +9,12 @@ function P({
   className?: string;
 }) {
   return (
-    <p className={cn("text-lg max-w-2xl mx-auto text-primary-text", className)}>
+    <p
+      className={cn(
+        "text-primary-text mx-auto max-w-2xl text-sm sm:text-base",
+        className,
+      )}
+    >
       {children}
     </p>
   );

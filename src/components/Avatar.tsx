@@ -4,7 +4,7 @@ import Image from "next/image";
 function Avatar() {
   return (
     <div className="flex-col-center">
-      <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-clip rounded-full">
+      <div className="relative h-32 w-32 overflow-clip rounded-full md:h-52 md:w-52">
         <Image src={"/avatar.png"} alt="img" fill className="object-cover" />
       </div>
     </div>

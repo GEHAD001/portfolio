@@ -40,13 +40,13 @@ function TextTransition({
       <div className="flex h-[2rem] flex-col overflow-hidden leading-[2rem]">
         <motion.span
           style={{ y: firstWordY }}
-          className="relative transition-transform duration-1000 will-change-transform"
+          className="relative bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent transition-transform duration-1000 will-change-transform"
         >
           {first}
         </motion.span>
         <motion.span
           style={{ y: lastWordY }}
-          className="relative transition-transform duration-1000"
+          className="relative text-purple-600 transition-transform duration-1000"
         >
           {last}
         </motion.span>
