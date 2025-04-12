@@ -8,7 +8,9 @@ function P({
   children?: ReactNode;
   className?: string;
 }) {
-  return <p className={cn("", className)}>{children}</p>;
+  return (
+    <p className={cn("text-lg max-w-2xl mx-auto", className)}>{children}</p>
+  );
 }
 
 export default P;

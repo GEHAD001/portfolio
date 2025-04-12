@@ -8,7 +8,7 @@ import Wrapper from "../Wrapper";
 export default function HeroSection() {
   return (
     <>
-      <Section id="Hero" className="  ">
+      <Section id="Hero" className="relative">
         <div className="relative h-full">
           <Wrapper className="2xl:sticky 2xl:top-2 bg-amber-200 2xl:p-20 flex-col-center h-dynamic-screen">
             <Avatar />
@@ -19,12 +19,18 @@ export default function HeroSection() {
                 last="Designer"
               />
             </div>
-            <P>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
-              blanditiis beatae officiis laudantium molestias ullam non optio.
-              Magnam hic odio repellendus deserunt ex temporibus porro odit!
-              Itaque nobis vero laudantium?
-            </P>
+
+            <div>
+              <P>
+                I&apos;m Jehad Jadallah Hamed, junior software developer and
+                designer base on AI, live in libya, gradutaed from OMU (Omar
+                Almokhtar Unversity) In 2024.
+              </P>
+              <P>
+                My Portfolio Split into Section, each Section tell about itself
+                and the story behind it.
+              </P>
+            </div>
 
             <div className="absolute bottom-8 left-8">
               <ContactNav />

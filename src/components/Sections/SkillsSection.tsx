@@ -3,21 +3,28 @@ import { cn } from "@/lib/utils";
 import P from "@/components/P";
 import { motion } from "motion/react";
 import { skills } from "@/database/data";
+import Section from "../Section";
+import H2 from "../H2";
 
 export default function SkillsSection({ className }: { className?: string }) {
   return (
-    <motion.div
-      className={cn(" bg-green-100 2xl:p-20 skills-layout gap-2", className)}
-    >
-      {skills.map(({ title, description, className }) => (
-        <SkillCard
-          title={title}
-          description={description}
-          className={className}
-          key={title}
-        />
-      ))}
-    </motion.div>
+    <Section className={cn("flex-col-center", className)}>
+      <H2 className="text-4xl font-bold mb-4">Skills</H2>
+      <P>
+        A collection of my recent work showcasing my skills and experience in
+        web development.
+      </P>
+      <motion.div className={cn("skills-layout gap-2")}>
+        {skills.map(({ title, description, className }) => (
+          <SkillCard
+            title={title}
+            description={description}
+            className={className}
+            key={title}
+          />
+        ))}
+      </motion.div>
+    </Section>
   );
 }
 

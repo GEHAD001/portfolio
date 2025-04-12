@@ -3,32 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
 import { useScroll, useTransform, motion } from "motion/react";
-
-const designerException: {
-  title: string;
-  description: string;
-}[] = [
-  {
-    title: "Build Complex Layouts",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-  },
-  {
-    title: "Typegrophy",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-  },
-  {
-    title: "Consistency",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-  },
-  {
-    title: "Coloring",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-  },
-  {
-    title: "Motion",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-  },
-];
+import P from "../P";
+import { designerException } from "@/database/data";
 
 export default function DesignerSection({ className }: { className?: string }) {
   const section = useRef(null);
@@ -65,7 +41,7 @@ export default function DesignerSection({ className }: { className?: string }) {
         {designerException.map(({ title, description }) => (
           <div key={title} className="border-2 flex-col-center gap-8 p-12">
             <h1 className="text-3xl">{title}</h1>
-            <p>{description}</p>
+            <P>{description}</P>
           </div>
         ))}
       </div>

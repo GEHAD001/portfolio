@@ -1,51 +1,10 @@
-import React, { ReactNode, useRef } from "react";
+import React, { useRef } from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
-import {
-  FramermotionOriginal,
-  NextjsOriginal,
-  ReactOriginal,
-  TailwindcssOriginal,
-  TypescriptOriginal,
-} from "devicons-react";
-import { useScroll, motion, useInView, MotionValue } from "motion/react";
-
-const techs: {
-  name: string;
-  description: string;
-  Icon: React.FunctionComponent;
-}[] = [
-  {
-    name: "TypeScript",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
-    Icon: TypescriptOriginal,
-  },
-  {
-    name: "Tailwind",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
-    Icon: TailwindcssOriginal,
-  },
-  {
-    name: "Next",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
-    Icon: NextjsOriginal,
-  },
-  {
-    name: "React",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
-    Icon: ReactOriginal,
-  },
-  {
-    name: "Motion",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sequi sapiente aspernatur.",
-    Icon: FramermotionOriginal,
-  },
-];
+import { motion, useInView } from "motion/react";
+import H2 from "../H2";
+import P from "../P";
+import { techs } from "@/database/data";
 
 export default function TechStackSection({
   className,
@@ -60,6 +19,10 @@ export default function TechStackSection({
       className={cn("grid gap-12 p-24 items-center justify-center", className)}
       ref={sectionRef}
     >
+      <div className="flex-col-center">
+        <H2 className="text-4xl font-bold mb-4">Technology Stack</H2>
+        <P>A collection of modren tecnologies I am familiar with.</P>
+      </div>
       {techs.map(({ name, description, Icon }) => (
         <motion.div
           style={{
@@ -67,16 +30,16 @@ export default function TechStackSection({
             opacity: inView ? 1 : 0,
           }}
           className={cn(
-            "grid grid-flow-row md:grid-flow-col gap-4 items-center transition-[transform_opacity] duration-[2250ms]"
+            "grid grid-flow-row md:grid-flow-col gap-4 items-center transition-[transform_opacity] duration-[2250ms] place-items-center"
           )}
           key={name}
         >
-          <Icon size={80} />
-          <div>
+          <Icon size={80} className="place-items-center" />
+          <div className="flex flex-col text-center md:text-start">
             <h1 className="text-[clamp(0.5rem,__10vw+0.5em__,1.5rem)]">
               {name}
             </h1>
-            <p>{description}</p>
+            <P>{description}</P>
           </div>
         </motion.div>
       ))}

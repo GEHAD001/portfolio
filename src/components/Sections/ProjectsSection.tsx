@@ -9,11 +9,7 @@ export default function ProjectsSection({ className }: { className?: string }) {
   const inView = useInView(sectionRef, { amount: 0.15, once: true });
 
   return (
-    <Section
-      className={cn("p-12 md:p-24", className)}
-      ref={sectionRef}
-      id="Projects"
-    >
+    <Section className={cn("", className)} ref={sectionRef} id="Projects">
       <motion.div
         className="mb-12 text-center"
         style={{
