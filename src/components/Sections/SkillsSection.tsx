@@ -44,7 +44,9 @@ function SkillCard({
       transition={{ type: "spring", stiffness: 300 }}
     >
       <h3 className="text-xl font-bold">{title}</h3>
-      <p className="text-center text-gray-600">{description}</p>
+      <p className="text-center text-sm text-balance text-gray-600">
+        {description}
+      </p>
     </motion.div>
   );
 }
