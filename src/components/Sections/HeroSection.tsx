@@ -9,8 +9,8 @@ export default function HeroSection() {
   return (
     <>
       <Section id="Hero" className="relative bg-amber-50">
-        <div className="relative h-full">
-          <Wrapper className="2xl:sticky 2xl:top-2 2xl:p-20 flex-col-center gap-4 h-dynamic-screen text-center">
+        <div className="relative min-h-full p-20">
+          <Wrapper className="flex-col-center h-dynamic-screen gap-4 text-center 2xl:sticky 2xl:top-2 2xl:p-20">
             <Avatar />
             <div className="flex-col-center">
               <TextTransition
@@ -20,15 +20,17 @@ export default function HeroSection() {
               />
             </div>
 
-            <div>
+            <div className="flex-col-center gap-2">
               <P>
-                I&apos;m Jehad Jadallah Hamed, junior software developer and
-                designer base on AI, live in libya, gradutaed from OMU (Omar
-                Almokhtar Unversity) In 2024.
+                I&apos;m Jehad Jadallah Hamed, a junior software developer and
+                design base on AI. Based in Libya, I recently graduated from
+                Omar Al-Mukhtar University (OMU) in 2024, bringing fresh
+                perspectives and innovative solutions to the tech world.
               </P>
               <P>
-                My Portfolio Split into Section, each Section tell about itself
-                and the story behind it.
+                My portfolio is thoughtfully organized into sections, each
+                showcasing unique projects and experiences that demonstrate my
+                passion for creating impactful digital solutions.
               </P>
             </div>
 
