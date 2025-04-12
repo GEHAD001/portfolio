@@ -1,9 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { motion, motionValue, useTransform } from "motion/react";
 
-function TextTransition({
+function TextTransitionMemo({
   prefix,
   first,
   last,
@@ -54,5 +54,5 @@ function TextTransition({
     </div>
   );
 }
-
+const TextTransition = memo(TextTransitionMemo);
 export default TextTransition;

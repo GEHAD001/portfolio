@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import { memo, ReactNode } from "react";
 
-export default function GridBaseLayout({
+function GridBaseLayoutMemo({
   children,
   className,
 }: {
@@ -14,3 +14,6 @@ export default function GridBaseLayout({
     </main>
   );
 }
+
+const GridBaseLayout = memo(GridBaseLayoutMemo);
+export default GridBaseLayout;

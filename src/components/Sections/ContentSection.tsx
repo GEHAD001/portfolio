@@ -6,7 +6,8 @@ import ProjectsSection from "./ProjectsSection";
 import DeveloperSection from "./DeveloperSection";
 import DesignerSection from "./DesignerSection";
 import ContactSection from "./ContactSection";
-export default function ContentSection() {
+import { memo } from "react";
+function ContentSectionMemo() {
   return (
     <Section id="Content" className="flex-col-center gap-4">
       <SkillsSection className="w-full rounded-2xl bg-amber-50 p-12 shadow-lg md:p-16" />
@@ -23,3 +24,6 @@ export default function ContentSection() {
     </Section>
   );
 }
+
+const ContentSection = memo(ContentSectionMemo);
+export default ContentSection;

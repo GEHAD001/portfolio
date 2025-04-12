@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
 import { motion, useInView } from "motion/react";
@@ -6,7 +6,7 @@ import { colorMapper, projects } from "@/database/data";
 import P from "../P";
 import H2 from "../H2";
 
-export default function ProjectsSection({ className }: { className?: string }) {
+function ProjectsSectionMemo({ className }: { className?: string }) {
   const sectionRef = useRef(null);
   const inView = useInView(sectionRef, { amount: 0.15, once: true });
 
@@ -64,3 +64,6 @@ export default function ProjectsSection({ className }: { className?: string }) {
     </Section>
   );
 }
+
+const ProjectsSection = memo(ProjectsSectionMemo);
+export default ProjectsSection;

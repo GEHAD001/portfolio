@@ -1,11 +1,12 @@
-import ContactNav from "@/components/ContactNav";
+import React, { memo } from "react";
 import Section from "@/components/Section";
 import Avatar from "@/components/Avatar";
 import P from "@/components/P";
 import TextTransition from "@/components/TextTransition";
 import Wrapper from "../Wrapper";
+import { DialogContact } from "../DialogContact";
 
-export default function HeroSection() {
+function HeroSectionMemo() {
   return (
     <>
       <Section id="Hero" className="relative bg-amber-50">
@@ -20,7 +21,7 @@ export default function HeroSection() {
               />
             </div>
 
-            <div className="flex-col-center gap-2 px-8">
+            <div className="flex-col-center gap-4 px-8">
               <P>
                 I&apos;m Jehad Jadallah Hamed, a junior software developer and
                 design base on AI. Based in Libya, I recently graduated from
@@ -32,10 +33,7 @@ export default function HeroSection() {
                 showcasing unique projects and experiences that demonstrate my
                 passion for creating impactful digital solutions.
               </P>
-            </div>
-
-            <div className="absolute bottom-8 left-8">
-              <ContactNav />
+              <DialogContact />
             </div>
           </Wrapper>
         </div>
@@ -43,3 +41,6 @@ export default function HeroSection() {
     </>
   );
 }
+
+const HeroSection = memo(HeroSectionMemo);
+export default HeroSection;

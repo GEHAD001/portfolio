@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { contacts } from "@/database/data";
 import { Copy } from "lucide-react";
-import { useState } from "react";
+import { memo, useState } from "react";
 import { toast } from "sonner";
 
 const handleCopy = async (value: string) => {
@@ -25,7 +25,7 @@ const handleCopy = async (value: string) => {
   }
 };
 
-export function DialogContact() {
+function DialogContactMemo() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ export function DialogContact() {
       <DialogTrigger asChild>
         <Button
           variant="outline"
-          className="rounded-lg border-blue-200/20 bg-gradient-to-r from-blue-500/10 to-blue-600/10 px-8 py-6 text-2xl text-blue-600 transition-all duration-300 hover:border-blue-300/20 hover:from-blue-500/20 hover:to-blue-600/20"
+          className="cursor-pointer rounded-lg border-blue-200/20 bg-gradient-to-r from-blue-500/10 to-blue-600/10 px-8 py-6 text-2xl text-blue-600 transition-all duration-300 hover:border-blue-300/20 hover:from-blue-500/20 hover:to-blue-600/20"
         >
           Contact
         </Button>
@@ -77,3 +77,5 @@ export function DialogContact() {
     </Dialog>
   );
 }
+
+export const DialogContact = memo(DialogContactMemo);

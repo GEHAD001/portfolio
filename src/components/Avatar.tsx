@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
+import { memo } from "react";
 
-function Avatar() {
+function AvatarMemo() {
   return (
     <div className="flex-col-center">
       <div className="relative h-32 w-32 overflow-clip rounded-full md:h-52 md:w-52">
@@ -11,4 +12,5 @@ function Avatar() {
   );
 }
 
+const Avatar = memo(AvatarMemo);
 export default Avatar;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
 import Wrapper from "../Wrapper";
@@ -6,11 +6,7 @@ import { developerException } from "@/database/data";
 import H2 from "../H2";
 import P from "../P";
 
-export default function DeveloperSection({
-  className,
-}: {
-  className?: string;
-}) {
+function DeveloperSectionMemo({ className }: { className?: string }) {
   return (
     <Section className={cn("flex-col-center bg-blue-50", className)}>
       <H2 className="mb-4 text-4xl font-bold">
@@ -33,10 +29,13 @@ export default function DeveloperSection({
             key={title}
           >
             <h3 className="mb-2 text-lg font-semibold">{title}</h3>
-            <p className="text-sm text-gray-600">{description}</p>
+            <p className="text-sm text-balance text-gray-600">{description}</p>
           </div>
         ))}
       </Wrapper>
     </Section>
   );
 }
+
+const DeveloperSection = memo(DeveloperSectionMemo);
+export default DeveloperSection;

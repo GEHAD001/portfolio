@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
 import { useScroll, useTransform, motion } from "motion/react";
 import { designerException } from "@/database/data";
 
-export default function DesignerSection({ className }: { className?: string }) {
+function DesignerSectionMemo({ className }: { className?: string }) {
   const section = useRef(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -46,7 +46,7 @@ export default function DesignerSection({ className }: { className?: string }) {
         {designerException.map(({ title, description }) => (
           <div
             key={title}
-            className="flex-col-center gap-6 rounded-xl border-2 border-purple-200 bg-white/50 p-8 shadow-sm transition-colors duration-300 hover:bg-purple-50 hover:shadow-md"
+            className="flex-col-center gap-2 rounded-xl border-2 border-purple-200 bg-white/50 p-8 shadow-sm transition-colors duration-300 hover:bg-purple-50 hover:shadow-md"
           >
             <h1 className="text-2xl font-semibold text-purple-800">{title}</h1>
             <p className="text-sm text-purple-900/80">{description}</p>
@@ -56,3 +56,6 @@ export default function DesignerSection({ className }: { className?: string }) {
     </Section>
   );
 }
+
+const DesignerSection = memo(DesignerSectionMemo);
+export default DesignerSection;

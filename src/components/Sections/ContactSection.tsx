@@ -1,13 +1,13 @@
-import React from "react";
+import React, { memo } from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
 import { DialogContact } from "../DialogContact";
 
-export default function ContactSection({ className }: { className?: string }) {
+function ContactSectionMemo({ className }: { className?: string }) {
   return (
     <Section className={cn("flex", className)}>
       <div className="w-full">
-        <h2 className="text-3xl font-semibold mb-4">Contact</h2>
+        <h2 className="mb-4 text-3xl font-semibold">Contact</h2>
         <p className="mb-4">
           If you have any questions, suggestions, or just want to say hello,
           feel free to reach out to me. I&apos;m always open to new
@@ -20,3 +20,6 @@ export default function ContactSection({ className }: { className?: string }) {
     </Section>
   );
 }
+
+const ContactSection = memo(ContactSectionMemo);
+export default ContactSection;

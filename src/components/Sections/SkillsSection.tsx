@@ -1,4 +1,4 @@
-"use client";
+import React, { memo } from "react";
 import { cn } from "@/lib/utils";
 import P from "@/components/P";
 import { motion } from "motion/react";
@@ -6,7 +6,7 @@ import { skills } from "@/database/data";
 import Section from "../Section";
 import H2 from "../H2";
 
-export default function SkillsSection({ className }: { className?: string }) {
+function SkillsSectionMemo({ className }: { className?: string }) {
   return (
     <Section className={cn("flex-col-center gap-4", className)}>
       <H2 className="text-4xl font-bold">Skills</H2>
@@ -35,15 +35,19 @@ function SkillCard({
   className?: string;
 }) {
   return (
-    <div
+    <motion.div
       className={cn(
-        "flex-col-center rounded-2xl p-8 shadow-lg transition-all hover:scale-[1.02]",
-        "border-opacity-20 border-2",
+        "flex-col-center gap-2 rounded-lg bg-white p-4 shadow-lg",
         className,
       )}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
     >
-      <h1 className="mb-2 text-xl font-semibold">{title}</h1>
-      <p className="text-opacity-90 text-sm">{description}</p>
-    </div>
+      <h3 className="text-xl font-bold">{title}</h3>
+      <p className="text-center text-gray-600">{description}</p>
+    </motion.div>
   );
 }
+
+const SkillsSection = memo(SkillsSectionMemo);
+export default SkillsSection;

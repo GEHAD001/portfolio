@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import Section from "../Section";
 import { cn } from "@/lib/utils";
 import { motion, useInView } from "motion/react";
@@ -6,11 +6,7 @@ import H2 from "../H2";
 import P from "../P";
 import { techs } from "@/database/data";
 
-export default function TechStackSection({
-  className,
-}: {
-  className?: string;
-}) {
+function TechStackSectionMemo({ className }: { className?: string }) {
   const sectionRef = useRef(null);
   const inView = useInView(sectionRef, { amount: 0.25, once: true });
 
@@ -25,24 +21,24 @@ export default function TechStackSection({
       </div>
       {techs.map(({ name, description, Icon }) => (
         <motion.div
+          key={name}
           style={{
             x: inView ? "0%" : "-200%",
             opacity: inView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
-          className={cn(
-            "grid grid-flow-row items-center gap-6 rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-sm transition-[transform_opacity] duration-[1850ms] hover:bg-white/10 hover:shadow-xl md:grid-flow-col",
-          )}
-          key={name}
+          className="flex items-center gap-4"
         >
-          <div className="flex-col-center rounded-lg bg-gradient-to-br from-white/10 to-white/5 p-4 shadow-inner">
-            <Icon size={80} />
-          </div>
-          <div className="flex flex-col space-y-2 text-center md:text-start">
-            <h1 className="text-xl font-semibold">{name}</h1>
-            <P>{description}</P>
+          <Icon size={80} />
+          <div>
+            <h3 className="text-xl font-bold">{name}</h3>
+            <p className="text-gray-600">{description}</p>
           </div>
         </motion.div>
       ))}
     </Section>
   );
 }
+
+const TechStackSection = memo(TechStackSectionMemo);
+export default TechStackSection;
