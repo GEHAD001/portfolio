@@ -11,7 +11,7 @@ function P({
   return (
     <p
       className={cn(
-        "text-primary-text mx-auto max-w-2xl text-sm sm:text-base",
+        "text-primary-text text-[clamp(14px,__2.5vw,__16px)]",
         className,
       )}
     >

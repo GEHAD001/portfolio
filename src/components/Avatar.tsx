@@ -5,7 +5,7 @@ import { memo } from "react";
 function AvatarMemo() {
   return (
     <div className="flex-col-center">
-      <div className="relative h-32 w-32 overflow-clip rounded-full md:h-52 md:w-52">
+      <div className="relative h-[clamp(6rem,14vw__,__12rem)] w-[clamp(6rem,14vw__,__12rem)] overflow-clip rounded-full">
         <Image src={"/avatar.png"} alt="img" fill className="object-cover" />
       </div>
     </div>

@@ -9,7 +9,7 @@ import H2 from "../H2";
 function SkillsSectionMemo({ className }: { className?: string }) {
   return (
     <Section className={cn("flex-col-center gap-4", className)}>
-      <H2 className="text-4xl font-bold">Skills</H2>
+      <H2 className="font-bold">Skills</H2>
       <P>Here&apos;s what I bring to the table</P>
       <motion.div className={cn("skills-layout gap-4")}>
         {skills.map(({ title, description, className }) => (

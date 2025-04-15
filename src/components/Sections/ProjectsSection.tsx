@@ -20,7 +20,7 @@ function ProjectsSectionMemo({ className }: { className?: string }) {
           transition: "all 0.7s ease-out",
         }}
       >
-        <H2 className="mb-4 text-4xl font-bold">Featured Projects</H2>
+        <H2 className="mb-4 font-bold">Featured Projects</H2>
         <P className="mx-auto max-w-2xl text-lg">
           A collection of my recent work showcasing my skills and experience in
           web development.

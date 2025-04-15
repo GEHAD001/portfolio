@@ -33,9 +33,9 @@ function DialogContactMemo() {
       <DialogTrigger asChild>
         <Button
           variant="outline"
-          className="cursor-pointer rounded-lg border-blue-200/20 bg-gradient-to-r from-blue-500/10 to-blue-600/10 px-8 py-6 text-2xl text-blue-600 transition-all duration-300 hover:border-blue-300/20 hover:from-blue-500/20 hover:to-blue-600/20"
+          className="cursor-pointer rounded-lg border-blue-200/20 bg-gradient-to-r from-blue-500/10 to-blue-600/10 px-4 py-3 text-[clamp(14px,__2.5vw,__20px)] text-blue-600 transition-all duration-300 hover:border-blue-300/20 hover:from-blue-500/20 hover:to-blue-600/20 lg:px-6 lg:py-4"
         >
-          Contact
+          Contact Me
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">

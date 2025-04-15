@@ -54,18 +54,14 @@
 
 @utility base-layout {
   display: grid;
-  grid-template-rows: repeat(auto-fit, 100dvh);
   margin-inline: auto;
-  width: calc(100% - 1rem);
+  max-width: min(90em, 100% - 2rem);
 
-  @media (min-width: 768px) {
-    width: calc(100% - 4rem);
-  }
-  @media (min-width: 1024px) {
-    width: calc(100% - 8rem);
+  @media (min-width: 48em) {
+    width: min(50em, 100% - 4rem);
   }
 
-  @media (min-width: 85em) {
+  @media (min-width: 80em) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     width: calc(100% - 1rem);
@@ -104,6 +100,8 @@
       "four five six six";
   }
 }
+
+/* Shadcn Styles 👇 */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

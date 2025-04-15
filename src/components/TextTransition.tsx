@@ -32,7 +32,7 @@ function TextTransitionMemo({
   return (
     <div
       className={cn(
-        "flex items-center gap-2 rounded bg-black p-2 text-2xl text-white",
+        "flex items-center gap-2 rounded bg-black px-2 py-1 text-[clamp(16px,__2.5vw,__20px)] text-white lg:px-4 lg:py-2",
         className,
       )}
     >

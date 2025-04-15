@@ -9,7 +9,7 @@ function GridBaseLayoutMemo({
   className?: string;
 }) {
   return (
-    <main className={cn("base-layout lg:h-dynamic-screen", className)}>
+    <main className={cn("base-layout my-1 lg:my-4", className)}>
       {children}
     </main>
   );
