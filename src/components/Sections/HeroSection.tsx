@@ -1,3 +1,4 @@
+"use client";
 import React, { memo } from "react";
 import Section from "@/components/Section";
 import Avatar from "@/components/Avatar";
@@ -5,16 +6,28 @@ import P from "@/components/P";
 import TextTransition from "@/components/TextTransition";
 import Wrapper from "../Wrapper";
 import { DialogContact } from "../DialogContact";
+import { useScroll, motion, useTransform } from "motion/react";
 
 // Note: Most Websites Ignore define Height at all.
 
 function HeroSectionMemo() {
+  const { scrollY } = useScroll();
+  const backgroundColor = useTransform(
+    scrollY,
+    Array.from({ length: 6 }, (_, i) => 500 * i + 1),
+    ["#fffbeb", "#ecfdf5", "#f0fdfa", "#ffffff", "#fff7ed", "#fff7ed"],
+  );
   return (
     <>
       <Section id="Hero" className="relative">
         <Wrapper className="relative xl:min-h-full">
           {/* Sticky Content */}
-          <Wrapper className="flex-col-center gap-4 rounded-2xl bg-amber-100 p-[clamp(1rem,__6vw,__1.125rem)] py-8 text-center xl:sticky xl:top-4 xl:py-12">
+          <Wrapper className="flex-col-center relative gap-4 overflow-hidden rounded-2xl p-[clamp(1rem,__6vw,__1.125rem)] py-8 text-center xl:sticky xl:top-4 xl:py-12">
+            <motion.div
+              style={{ backgroundColor }}
+              className="absolute inset-0 -z-10 will-change-auto"
+            ></motion.div>
+
             <Avatar />
             <div className="flex-col-center">
               <TextTransition

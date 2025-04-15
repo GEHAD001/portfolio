@@ -218,3 +218,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+@utility typing-9 {
+  & {
+    animation:
+      typing 2s steps(9) infinite,
+      blink-caret 1s infinite;
+  }
+}
+
+@keyframes typing {
+  0% {
+    max-width: 0ch;
+  }
+  100% {
+    max-width: 9ch;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-right: none;
+  }
+  50% {
+    border-right: 3px solid orange;
+  }
+}

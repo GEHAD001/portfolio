@@ -11,7 +11,7 @@ function DeveloperSectionMemo({ className }: { className?: string }) {
     <Section className={cn("flex-col-center bg-blue-50", className)}>
       <H2 className="mb-4 font-bold">
         How I Work as a{" "}
-        <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
+        <span className="typing-9 inline-flex overflow-hidden bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-nowrap text-transparent">
           Developer
         </span>
       </H2>

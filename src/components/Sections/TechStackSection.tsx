@@ -20,7 +20,7 @@ function TechStackSectionMemo({ className }: { className?: string }) {
         <H2 className="mb-4 font-bold">Technology Stack</H2>
         <P>A collection of modren tecnologies I am familiar with.</P>
       </div>
-      <Wrapper>
+      <Wrapper className="flex-col-center gap-2 md:gap-0">
         {techs.map(({ name, description, Icon }) => (
           <motion.div
             key={name}

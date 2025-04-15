@@ -34,11 +34,11 @@ function DesignerSectionMemo({ className }: { className?: string }) {
       <div className="relative">
         <motion.div
           style={{ y }}
-          className="shadow-md, rounded-xl border-2 bg-gradient-to-r from-purple-100 to-purple-200 p-12 text-3xl will-change-transform"
+          className="shadow-md, rounded-xl border-2 bg-gradient-to-r from-orange-100 to-orange-200 p-12 text-3xl will-change-transform"
         >
           <h1>
             What to Expect From me as{" "}
-            <span className="text-purple-600">Designer</span>
+            <span className="text-orange-600">Designer</span>
           </h1>
         </motion.div>
       </div>
@@ -46,10 +46,10 @@ function DesignerSectionMemo({ className }: { className?: string }) {
         {designerException.map(({ title, description }) => (
           <div
             key={title}
-            className="flex-col-center gap-2 rounded-xl border-2 border-purple-200 bg-white/50 p-8 shadow-sm transition-colors duration-300 hover:bg-purple-50 hover:shadow-md"
+            className="flex-col-center relative gap-2 rounded-xl border-2 border-orange-200 bg-white/50 p-8 shadow-sm transition-colors duration-300 hover:bg-orange-100 hover:shadow-md"
           >
-            <h1 className="text-2xl font-semibold text-purple-800">{title}</h1>
-            <p className="text-sm text-purple-900/80">{description}</p>
+            <h1 className="text-2xl font-semibold text-orange-800">{title}</h1>
+            <p className="text-sm text-orange-900/80">{description}</p>
           </div>
         ))}
       </div>
