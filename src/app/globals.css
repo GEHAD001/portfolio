@@ -93,11 +93,11 @@
 
 .developer-layout {
   display: grid;
-  grid-template-areas: "one" "two" "three" "four" "five" "six";
+  grid-template-areas: "one" "two" "three" "four";
   @media (min-width: 768px) {
     grid-template-areas:
-      "one one two three"
-      "four five six six";
+      "one  two "
+      "three four";
   }
 }
 
@@ -222,7 +222,7 @@
 @utility typing-9 {
   & {
     animation:
-      typing 2s steps(9) infinite,
+      typing 3.5s steps(9) infinite,
       blink-caret 1s infinite;
   }
 }
@@ -243,5 +243,30 @@
   }
   50% {
     border-right: 3px solid orange;
+  }
+}
+
+@utility background-colors {
+  animation: background-colors 10s infinite;
+}
+
+@keyframes background-colors {
+  0% {
+    background-color: #f9f5ff; /* Soft lavender */
+  }
+  20% {
+    background-color: #f0f7ff; /* Pale blue */
+  }
+  40% {
+    background-color: #f0fdf4; /* Soft mint */
+  }
+  60% {
+    background-color: #fdf2f8; /* Soft pink */
+  }
+  80% {
+    background-color: #fff8f1; /* Soft peach */
+  }
+  100% {
+    background-color: #f9f5ff; /* Back to soft lavender for smooth loop */
   }
 }

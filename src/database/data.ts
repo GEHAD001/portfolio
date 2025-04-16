@@ -213,38 +213,27 @@ export const developerException: {
     title: "Research First, Code Later",
     description:
       "Before diving in, I take time to research and plan. This helps me find the best solutions and avoid common pitfalls!",
-    className:
-      "grid-area-one bg-blue-100 hover:bg-blue-200 md:bg-blue-200 md:hover:bg-blue-300",
+    className: "grid-area-one bg-blue-200 hover:bg-blue-300  ",
   },
-  {
-    title: "Always Learning",
-    description:
-      "Every challenge is a chance to learn! I see mistakes as stepping stones to becoming a better developer.",
-    className: "grid-area-two bg-blue-100 hover:bg-blue-200",
-  },
+
   {
     title: "Adaptable & Flexible",
     description:
       "I love learning new technologies! With strong fundamentals, I can quickly adapt to different tools and frameworks.",
-    className: "grid-area-three bg-blue-100 hover:bg-blue-200",
-  },
-  {
-    title: "AI-Friendly Developer",
-    description:
-      "I embrace AI as a powerful tool that helps me work smarter and faster. It's like having a super-helpful coding buddy!",
-    className: "grid-area-four bg-blue-100 hover:bg-blue-200",
+    className: "grid-area-two bg-blue-100 hover:bg-blue-200",
   },
   {
     title: "Deep Understanding",
     description:
       "I take the time to really understand what I'm working with. This helps me write better code and solve problems more effectively.",
-    className: "grid-area-five bg-blue-100 hover:bg-blue-200",
+    className:
+      "grid-area-three bg-blue-200 hover:bg-blue-300 md:bg-blue-100 md:hover:bg-blue-200",
   },
   {
     title: "Reliable Partner",
     description:
       "You can count on me to be honest, make smart decisions, and always keep your best interests in mind.",
     className:
-      "grid-area-six bg-blue-100 hover:bg-blue-200 md:bg-blue-200 md:hover:bg-blue-300",
+      "grid-area-four bg-blue-100 hover:bg-blue-200 md:bg-blue-200 md:hover:bg-blue-300",
   },
 ];
