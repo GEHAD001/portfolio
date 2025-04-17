@@ -16,7 +16,7 @@ function DeveloperSectionMemo({ className }: { className?: string }) {
           Developer
         </span>
       </H2>
-      <P className="mx-auto max-w-2xl text-center text-lg text-gray-600">
+      <P className="mx-auto max-w-2xl text-center text-gray-600">
         I love solving problems and creating great solutions. Here&apos;s my
         approach to development!
       </P>

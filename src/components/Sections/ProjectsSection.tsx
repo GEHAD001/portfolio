@@ -22,7 +22,7 @@ function ProjectsSectionMemo({ className }: { className?: string }) {
         }}
       >
         <H2 className="mb-4 font-bold">Featured Projects</H2>
-        <P className="mx-auto max-w-2xl text-lg">
+        <P className="mx-auto max-w-2xl">
           A collection of my recent work showcasing my skills and experience in
           web development.
         </P>
