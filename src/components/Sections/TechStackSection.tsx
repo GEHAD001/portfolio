@@ -6,6 +6,7 @@ import H2 from "../H2";
 import P from "../P";
 import { techs } from "@/database/data";
 import Wrapper from "../Wrapper";
+import { playFair } from "@/app/fonts";
 
 function TechStackSectionMemo({ className }: { className?: string }) {
   const sectionRef = useRef(null);
@@ -33,7 +34,9 @@ function TechStackSectionMemo({ className }: { className?: string }) {
           >
             <Icon className="size-15! md:size-40!" />
             <Wrapper className="flex-col-center text-center md:items-start md:text-start">
-              <h3 className="text-xl font-bold">{name}</h3>
+              <h3 className={`text-xl font-bold ${playFair.className}`}>
+                {name}
+              </h3>
               <p className="text-gray-600">{description}</p>
             </Wrapper>
           </motion.div>

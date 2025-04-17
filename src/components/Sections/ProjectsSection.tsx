@@ -5,6 +5,7 @@ import { motion, useInView } from "motion/react";
 import { colorMapper, projects } from "@/database/data";
 import P from "../P";
 import H2 from "../H2";
+import { playFair } from "@/app/fonts";
 
 function ProjectsSectionMemo({ className }: { className?: string }) {
   const sectionRef = useRef(null);
@@ -38,8 +39,10 @@ function ProjectsSectionMemo({ className }: { className?: string }) {
               transition: `all ${0.5 + index * 0.1}s ease-out`,
             }}
           >
-            <h3 className="mb-3 text-2xl font-semibold">{name}</h3>
-            <p className="mb-4 flex-grow text-gray-700 dark:text-gray-300">
+            <h3 className={`mb-3 text-xl font-bold ${playFair.className}`}>
+              {name}
+            </h3>
+            <p className="mb-4 flex-grow text-sm text-gray-700 dark:text-gray-300">
               {description}
             </p>
 

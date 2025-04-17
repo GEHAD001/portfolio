@@ -21,7 +21,7 @@ function HeroSectionMemo() {
                 prefix="Eng. Jehad"
                 first="Developer"
                 last="Designer"
-                className="font-bold"
+                className={`font-bold`}
               />
             </div>
 

@@ -5,6 +5,7 @@ import Wrapper from "../Wrapper";
 import { developerException } from "@/database/data";
 import H2 from "../H2";
 import P from "../P";
+import { playFair } from "@/app/fonts";
 
 function DeveloperSectionMemo({ className }: { className?: string }) {
   return (
@@ -28,7 +29,9 @@ function DeveloperSectionMemo({ className }: { className?: string }) {
             )}
             key={title}
           >
-            <h3 className="mb-2 text-lg font-semibold">{title}</h3>
+            <h3 className={`mb-2 text-lg font-bold ${playFair.className}`}>
+              {title}
+            </h3>
             <p className="text-sm text-balance text-gray-600">{description}</p>
           </div>
         ))}
